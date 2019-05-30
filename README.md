@@ -4,5 +4,5 @@ A Proposed Lecture Grading Application for students based on some metrics given.
 
 
 ## TODO
-- Separate Logic from UI generated files
-- Add Online Database support
+- [ ] Separate Logic from UI generated files
+- [ ] Add Online Database support
