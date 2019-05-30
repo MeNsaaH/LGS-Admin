@@ -1,0 +1,3039 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1174</width>
+    <height>712</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QComboBox, QLineEdit {
+border-radius: 5px;
+border: 3px solid rgb(207, 207, 207);
+font: 12pt &quot;Consolas&quot;;
+}
+
+
+QLineEdit:focus, QComboBox:focus, QComboBox:hover {
+outline: 1px solid rgb(60, 185, 112);
+background: rgb(223, 255, 208);
+border: 2px solid rgb(67, 148, 103);
+height: 10px;
+}
+
+QLabel {
+font-size: 16px;
+font-family: Comic Sans Ms
+}
+
+QPushButton {
+background-color: #4CAF50;
+selection-color: rgb(255, 255, 255);
+border-radius: 3px;
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+font: 10pt &quot;Comic Sans MS&quot;;
+padding: 0px;
+}
+QPushButton:hover {
+background-color: #ffffff;
+color: #000000;
+border: 2px solid  #4CAF50;
+}
+
+QPushButton#closeBtn {
+image: url(:/close);
+background: #ffffff;
+}
+
+QPushButton:hover#closeBtn {
+border: 2px solid rgb(248, 0, 0);
+}
+
+QLabel#closeBtn {
+padding: 0px;
+}
+QLabel#LoginLabel, QLabel#register_label {
+font-size: 30px;
+color:rgb(0, 255, 59);
+}
+
+QCheckBox {
+font: 75 12pt &quot;Comic Sans MS&quot;;
+}
+QLabel#errorLabel{
+background: rgba(254, 0, 0, 100);
+padding: 5px;
+height: 10px;
+}</string>
+  </property>
+  <property name="animated">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_14">
+    <property name="spacing">
+     <number>2</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_38">
+      <item>
+       <widget class="QPushButton" name="pushButton">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+color: rgb(0, 170, 0);
+font: 16pt &quot;Monaco&quot;;
+background: #ffffff;
+padding: 0px
+}
+QPushButton:hover#pushButton{
+color: rgb(0, 170, 0);
+font: 16pt &quot;Monaco&quot;;
+background: #ffffff;
+padding: 30px;
+border: None
+}</string>
+        </property>
+        <property name="text">
+         <string>     iLecture Grading System</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../resource.qrc">
+          <normaloff>:/logo</normaloff>:/logo</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>100</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="autoDefault">
+         <bool>true</bool>
+        </property>
+        <property name="default">
+         <bool>true</bool>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <widget class="QFrame" name="frame">
+          <property name="styleSheet">
+           <string notr="true">QFrame{
+	background-color: rgb(204, 204, 204);
+	border-right: 2px solid rgb(115, 115, 115);
+}
+
+QPushButton{
+	padding: 20px;
+	height: 40px;
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_11">
+           <item>
+            <widget class="QPushButton" name="courseGrading">
+             <property name="text">
+              <string>View Course Gradings</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="manLecturerBtn">
+             <property name="text">
+              <string>Manage Lecturer</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="manCoursesBtn">
+             <property name="text">
+              <string>Manage Courses</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="manClassRepsBtn">
+             <property name="text">
+              <string>Manage Class Reps</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="manLectHallBtn">
+             <property name="text">
+              <string>Manage Lecture Venues</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="settingBtn">
+             <property name="text">
+              <string>Settings and Help</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_20">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QStackedWidget" name="stackedWidget">
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="HomePage">
+           <layout class="QVBoxLayout" name="verticalLayout_32">
+            <item>
+             <widget class="QFrame" name="frame_2">
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_31">
+               <item>
+                <widget class="QLabel" name="label">
+                 <property name="text">
+                  <string>Welcome to the iLecture Grading System</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QTextBrowser" name="textBrowser">
+                 <property name="styleSheet">
+                  <string notr="true">border-top: 5px solid rgb(0, 85, 0)</string>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::Box</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <property name="html">
+                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;img src=&quot;:futminna_logo&quot; /&gt;&lt;span style=&quot; font-family:'Monaco'; font-size:13pt;&quot;&gt;An application that connects you to your students feelings about the efficiency of their lectures and how to improve them&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_6">
+                 <item>
+                  <spacer name="horizontalSpacer_20">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_21">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <spacer name="verticalSpacer_12">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="gradingPage">
+           <layout class="QVBoxLayout" name="verticalLayout_40">
+            <item>
+             <widget class="QWidget" name="widget" native="true">
+              <property name="styleSheet">
+               <string notr="true">
+QComboBox, QLineEdit {
+border-radius: 5px;
+border: 3px solid rgb(207, 207, 207);
+font: 12pt &quot;Consolas&quot;;
+}
+
+
+QLineEdit:focus, QComboBox:focus, QComboBox:hover {
+outline: 1px solid rgb(60, 185, 112);
+background: rgb(223, 255, 208);
+border: 2px solid rgb(67, 148, 103);
+height: 10px;
+}
+
+QLabel {
+font-size: 16px;
+font-family: Comic Sans Ms;
+padding: 5px;
+}
+
+QPushButton {
+background-color: #4CAF50;
+selection-color: rgb(255, 255, 255);
+border-radius: 3px;
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+font: 10pt &quot;Comic Sans MS&quot;;
+padding: 0px;
+}
+QPushButton:hover {
+background-color: #ffffff;
+color: #000000;
+border: 2px solid  #4CAF50;
+}
+
+QPushButton#closeBtn {
+image: url(:/close);
+background: #ffffff;
+}
+
+QPushButton:hover#closeBtn {
+border: 2px solid rgb(248, 0, 0);
+}
+
+QLabel#closeBtn {
+padding: 0px;
+}
+QLabel#LoginLabel, QLabel#register_label {
+font-size: 30px;
+color:rgb(0, 255, 59);
+}
+
+QCheckBox {
+font: 75 12pt &quot;Comic Sans MS&quot;;
+}
+QLabel#errorLabel{
+background: rgba(254, 0, 0, 100);
+padding: 5px;
+height: 10px;
+}</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_10">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_4">
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_2">
+                   <item>
+                    <layout class="QVBoxLayout" name="verticalLayout_8">
+                     <item>
+                      <widget class="QComboBox" name="levelCombo">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>140</width>
+                         <height>0</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true"/>
+                       </property>
+                       <item>
+                        <property name="text">
+                         <string>Select Level</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>100</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>200</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>300</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>400</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>500</string>
+                        </property>
+                       </item>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="verticalSpacer_6">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>20</width>
+                         <height>40</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_9">
+                   <item>
+                    <widget class="QComboBox" name="lecturerCombo">
+                     <property name="styleSheet">
+                      <string notr="true">height: 25px</string>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>Select Lecturer</string>
+                      </property>
+                     </item>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QComboBox" name="courseCombo">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>400</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">height: 25px</string>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>Select Course</string>
+                      </property>
+                     </item>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_19">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="chngResource">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">padding: 10px;
+height: 30px</string>
+                   </property>
+                   <property name="text">
+                    <string>Show Cumulated Grading</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_18">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="getGrading">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">height: 30px;
+padding: 10px</string>
+                   </property>
+                   <property name="text">
+                    <string>Get Gradings</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <widget class="QFrame" name="frame_3">
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_7">
+                  <item>
+                   <widget class="QTabWidget" name="tabWidget">
+                    <property name="styleSheet">
+                     <string notr="true">font: 9pt &quot;Comic Sans MS&quot;;</string>
+                    </property>
+                    <property name="currentIndex">
+                     <number>0</number>
+                    </property>
+                    <property name="tabBarAutoHide">
+                     <bool>false</bool>
+                    </property>
+                    <widget class="QWidget" name="recentCourseTab">
+                     <property name="styleSheet">
+                      <string notr="true"/>
+                     </property>
+                     <attribute name="title">
+                      <string>Course Grading</string>
+                     </attribute>
+                     <layout class="QVBoxLayout" name="verticalLayout_6">
+                      <item>
+                       <widget class="QStackedWidget" name="stackedWidget_2">
+                        <property name="styleSheet">
+                         <string notr="true">font: 11pt &quot;Comic Sans MS&quot;;</string>
+                        </property>
+                        <property name="currentIndex">
+                         <number>0</number>
+                        </property>
+                        <widget class="QWidget" name="page">
+                         <layout class="QVBoxLayout" name="verticalLayout_5">
+                          <item>
+                           <widget class="QLabel" name="label_33">
+                            <property name="sizePolicy">
+                             <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                              <horstretch>0</horstretch>
+                              <verstretch>0</verstretch>
+                             </sizepolicy>
+                            </property>
+                            <property name="text">
+                             <string>Course Grading presents an average grading for a lecturer presented by the student.</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="label_34">
+                            <property name="sizePolicy">
+                             <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                              <horstretch>0</horstretch>
+                              <verstretch>0</verstretch>
+                             </sizepolicy>
+                            </property>
+                            <property name="text">
+                             <string>To get recent grading for last lecture, click &lt;i&gt;&lt;b&gt;Get Grading&lt;/b&gt;&lt;/i&gt;. </string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="label_35">
+                            <property name="sizePolicy">
+                             <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                              <horstretch>0</horstretch>
+                              <verstretch>0</verstretch>
+                             </sizepolicy>
+                            </property>
+                            <property name="text">
+                             <string>To get the accumulated grading over all lectures, click &lt;b&gt;&lt;i&gt;Show Cumulated Grading&lt;/i&gt;&lt;/b&gt;</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <spacer name="verticalSpacer_22">
+                            <property name="orientation">
+                             <enum>Qt::Vertical</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                             <size>
+                              <width>20</width>
+                              <height>40</height>
+                             </size>
+                            </property>
+                           </spacer>
+                          </item>
+                          <item>
+                           <widget class="QWidget" name="summaryWidget" native="true">
+                            <layout class="QGridLayout" name="gridLayout_8" columnminimumwidth="0,0">
+                             <property name="sizeConstraint">
+                              <enum>QLayout::SetNoConstraint</enum>
+                             </property>
+                             <item row="0" column="0">
+                              <widget class="QLabel" name="label_99">
+                               <property name="sizePolicy">
+                                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">background-color: rgb(207, 207, 207);</string>
+                               </property>
+                               <property name="text">
+                                <string>Lecturer's Fullname:</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item row="2" column="0">
+                              <widget class="QLabel" name="label_103">
+                               <property name="sizePolicy">
+                                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">background-color: rgb(207, 207, 207);</string>
+                               </property>
+                               <property name="text">
+                                <string>Lecture Hall Used</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item row="4" column="1">
+                              <widget class="QLabel" name="ave_no_students">
+                               <property name="sizePolicy">
+                                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">background-color: rgb(207, 207, 207);</string>
+                               </property>
+                               <property name="text">
+                                <string>N/A</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item row="3" column="1">
+                              <widget class="QLabel" name="no_lectures">
+                               <property name="sizePolicy">
+                                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
+                               </property>
+                               <property name="text">
+                                <string>N/A</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item row="1" column="0">
+                              <widget class="QLabel" name="label_101">
+                               <property name="sizePolicy">
+                                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
+                               </property>
+                               <property name="text">
+                                <string>Course</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item row="2" column="1">
+                              <widget class="QLabel" name="lect_hall">
+                               <property name="sizePolicy">
+                                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">background-color: rgb(207, 207, 207);</string>
+                               </property>
+                               <property name="text">
+                                <string>N/A</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item row="4" column="0">
+                              <widget class="QLabel" name="label_102">
+                               <property name="sizePolicy">
+                                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">background-color: rgb(207, 207, 207);</string>
+                               </property>
+                               <property name="text">
+                                <string>Average No of Students</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item row="1" column="1">
+                              <widget class="QLabel" name="course_name">
+                               <property name="sizePolicy">
+                                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
+                               </property>
+                               <property name="text">
+                                <string>N/A</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item row="3" column="0">
+                              <widget class="QLabel" name="label_100">
+                               <property name="sizePolicy">
+                                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
+                               </property>
+                               <property name="text">
+                                <string>Number of Lectures</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item row="0" column="1">
+                              <widget class="QLabel" name="lect_fname">
+                               <property name="sizePolicy">
+                                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">background-color: rgb(207, 207, 207);</string>
+                               </property>
+                               <property name="text">
+                                <string>N/A</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item row="5" column="0">
+                              <widget class="QLabel" name="label_104">
+                               <property name="text">
+                                <string>Last Lecture Time</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item row="5" column="1">
+                              <widget class="QLabel" name="lect_time">
+                               <property name="text">
+                                <string>N/A</string>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                          <item>
+                           <spacer name="verticalSpacer_23">
+                            <property name="orientation">
+                             <enum>Qt::Vertical</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                             <size>
+                              <width>20</width>
+                              <height>40</height>
+                             </size>
+                            </property>
+                           </spacer>
+                          </item>
+                         </layout>
+                        </widget>
+                        <widget class="QWidget" name="page_3">
+                         <property name="styleSheet">
+                          <string notr="true">font: 11pt &quot;Comic Sans MS&quot;;</string>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_33">
+                          <item>
+                           <spacer name="verticalSpacer_14">
+                            <property name="orientation">
+                             <enum>Qt::Vertical</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                             <size>
+                              <width>20</width>
+                              <height>40</height>
+                             </size>
+                            </property>
+                           </spacer>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="label_2">
+                            <property name="sizePolicy">
+                             <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                              <horstretch>0</horstretch>
+                              <verstretch>0</verstretch>
+                             </sizepolicy>
+                            </property>
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>100</height>
+                             </size>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">background-color: rgb(255, 255, 255);
+font: 12pt &quot;Comic Sans MS&quot;;
+color: rgb(0, 0, 0);
+border: 2px solid rgb(0, 85, 0);</string>
+                            </property>
+                            <property name="text">
+                             <string>To what extend students agree with the following statements about what this lecturer does regarding this course</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <spacer name="verticalSpacer_13">
+                            <property name="orientation">
+                             <enum>Qt::Vertical</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                             <size>
+                              <width>20</width>
+                              <height>40</height>
+                             </size>
+                            </property>
+                           </spacer>
+                          </item>
+                          <item>
+                           <layout class="QGridLayout" name="gridLayout" rowminimumheight="40,40,40,40">
+                            <property name="sizeConstraint">
+                             <enum>QLayout::SetMinimumSize</enum>
+                            </property>
+                            <item row="1" column="0">
+                             <widget class="QLabel" name="label_3">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>Informs students about the course grading system at the beginning of each semester</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="2" column="0">
+                             <widget class="QLabel" name="label_4">
+                              <property name="styleSheet">
+                               <string notr="true">background-color: rgb(207, 207, 207);
+font: 10pt &quot;Comic Sans MS&quot;;</string>
+                              </property>
+                              <property name="text">
+                               <string>Informs students what he/she expects from them on this course at the beginning of the semester</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="3" column="0">
+                             <widget class="QLabel" name="label_5">
+                              <property name="text">
+                               <string>Provides or directs students to additional reading sources</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="0" column="0">
+                             <widget class="QLabel" name="label_6">
+                              <property name="styleSheet">
+                               <string notr="true">background-color: rgb(207, 207, 207);</string>
+                              </property>
+                              <property name="text">
+                               <string>Provides students with course outlines at the beginning of each semester</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="0" column="1">
+                             <widget class="QLabel" name="label_7">
+                              <property name="styleSheet">
+                               <string notr="true">background-color: rgb(207, 207, 207);</string>
+                              </property>
+                              <property name="text">
+                               <string>Strongly Disagree</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="1" column="1">
+                             <widget class="QLabel" name="label_8">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>Strongly Disagree</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="2" column="1">
+                             <widget class="QLabel" name="label_9">
+                              <property name="styleSheet">
+                               <string notr="true">background-color: rgb(207, 207, 207);</string>
+                              </property>
+                              <property name="text">
+                               <string>Strongly Disagree</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="3" column="1">
+                             <widget class="QLabel" name="label_10">
+                              <property name="text">
+                               <string>Strongly Disagree</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                         </layout>
+                        </widget>
+                        <widget class="QWidget" name="page_4">
+                         <property name="styleSheet">
+                          <string notr="true">font: 11pt &quot;Comic Sans MS&quot;;</string>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_34">
+                          <item>
+                           <spacer name="verticalSpacer_16">
+                            <property name="orientation">
+                             <enum>Qt::Vertical</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                             <size>
+                              <width>20</width>
+                              <height>40</height>
+                             </size>
+                            </property>
+                           </spacer>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="label_11">
+                            <property name="sizePolicy">
+                             <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+                              <horstretch>0</horstretch>
+                              <verstretch>0</verstretch>
+                             </sizepolicy>
+                            </property>
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>0</height>
+                             </size>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">background-color: rgb(255, 255, 255);
+font: 14pt &quot;Comic Sans MS&quot;;
+color: rgb(0, 0, 0);
+border: 2px solid rgb(0, 85, 0);</string>
+                            </property>
+                            <property name="text">
+                             <string>This Lecturer</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <spacer name="verticalSpacer_7">
+                            <property name="orientation">
+                             <enum>Qt::Vertical</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                             <size>
+                              <width>20</width>
+                              <height>40</height>
+                             </size>
+                            </property>
+                           </spacer>
+                          </item>
+                          <item>
+                           <layout class="QGridLayout" name="gridLayout_2" rowminimumheight="0,0,0,0,0,0,0">
+                            <item row="5" column="0">
+                             <widget class="QLabel" name="label_20">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>Treatss students equally regardless of gender</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="4" column="0">
+                             <widget class="QLabel" name="label_19">
+                              <property name="styleSheet">
+                               <string notr="true">background-color: rgb(207, 207, 207);</string>
+                              </property>
+                              <property name="text">
+                               <string>is Fair with his/her grading system (marks)</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="2" column="0">
+                             <widget class="QLabel" name="label_12">
+                              <property name="styleSheet">
+                               <string notr="true">background-color: rgb(207, 207, 207);</string>
+                              </property>
+                              <property name="text">
+                               <string>Makes the course challenging but interesting</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="1" column="0">
+                             <widget class="QLabel" name="label_13">
+                              <property name="text">
+                               <string>is tolerant of students</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="2" column="1" alignment="Qt::AlignHCenter">
+                             <widget class="QLabel" name="label_17">
+                              <property name="styleSheet">
+                               <string notr="true">background-color: rgb(207, 207, 207);</string>
+                              </property>
+                              <property name="text">
+                               <string>Strongly Disagree</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="1" column="1" alignment="Qt::AlignHCenter">
+                             <widget class="QLabel" name="label_16">
+                              <property name="text">
+                               <string>Strongly Disagree</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="0" column="1" alignment="Qt::AlignHCenter">
+                             <widget class="QLabel" name="label_15">
+                              <property name="styleSheet">
+                               <string notr="true">background-color: rgb(207, 207, 207);</string>
+                              </property>
+                              <property name="text">
+                               <string>Strongly Disagree</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="0" column="0">
+                             <widget class="QLabel" name="label_14">
+                              <property name="styleSheet">
+                               <string notr="true">background-color: rgb(207, 207, 207);</string>
+                              </property>
+                              <property name="text">
+                               <string>is considerate to students</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="3" column="0">
+                             <widget class="QLabel" name="label_18">
+                              <property name="text">
+                               <string>Encourages students to understand all phases of the course                </string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="3" column="1" alignment="Qt::AlignHCenter">
+                             <widget class="QLabel" name="label_21">
+                              <property name="text">
+                               <string>Strongly Disagree</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="6" column="0">
+                             <widget class="QLabel" name="label_22">
+                              <property name="styleSheet">
+                               <string notr="true">background-color: rgb(207, 207, 207);</string>
+                              </property>
+                              <property name="text">
+                               <string>Has high expectation for students</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="4" column="1" alignment="Qt::AlignHCenter">
+                             <widget class="QLabel" name="label_23">
+                              <property name="styleSheet">
+                               <string notr="true">background-color: rgb(207, 207, 207);</string>
+                              </property>
+                              <property name="text">
+                               <string>Strongly Disagree</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="5" column="1" alignment="Qt::AlignHCenter">
+                             <widget class="QLabel" name="label_24">
+                              <property name="text">
+                               <string>Strongly Disagree</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="6" column="1" alignment="Qt::AlignHCenter">
+                             <widget class="QLabel" name="label_25">
+                              <property name="styleSheet">
+                               <string notr="true">background-color: rgb(207, 207, 207);</string>
+                              </property>
+                              <property name="text">
+                               <string>Strongly Disagree</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                         </layout>
+                        </widget>
+                        <widget class="QWidget" name="page_5">
+                         <layout class="QVBoxLayout" name="verticalLayout_35">
+                          <item>
+                           <spacer name="verticalSpacer_15">
+                            <property name="orientation">
+                             <enum>Qt::Vertical</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                             <size>
+                              <width>20</width>
+                              <height>40</height>
+                             </size>
+                            </property>
+                           </spacer>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="label_39">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>0</height>
+                             </size>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);
+border: 2px solid rgb(0, 85, 0);
+height: 100px</string>
+                            </property>
+                            <property name="text">
+                             <string>This lecturer is accessible to students for academic Discussion</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <spacer name="verticalSpacer_17">
+                            <property name="orientation">
+                             <enum>Qt::Vertical</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                             <size>
+                              <width>20</width>
+                              <height>40</height>
+                             </size>
+                            </property>
+                           </spacer>
+                          </item>
+                          <item>
+                           <layout class="QGridLayout" name="gridLayout_3" rowminimumheight="50,50,50">
+                            <item row="1" column="1" alignment="Qt::AlignHCenter">
+                             <widget class="QLabel" name="label_30">
+                              <property name="text">
+                               <string>Strongly Disagree</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="2" column="0">
+                             <widget class="QLabel" name="label_27">
+                              <property name="styleSheet">
+                               <string notr="true">background-color: rgb(207, 207, 207);</string>
+                              </property>
+                              <property name="text">
+                               <string>Not available at all</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="1" column="0">
+                             <widget class="QLabel" name="label_28">
+                              <property name="text">
+                               <string>Outside the classroom</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="0" column="0">
+                             <widget class="QLabel" name="label_32">
+                              <property name="styleSheet">
+                               <string notr="true">background-color: rgb(207, 207, 207);</string>
+                              </property>
+                              <property name="text">
+                               <string>inside the classroom                                                                                                        </string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="0" column="1" alignment="Qt::AlignHCenter">
+                             <widget class="QLabel" name="label_31">
+                              <property name="styleSheet">
+                               <string notr="true">background-color: rgb(207, 207, 207);</string>
+                              </property>
+                              <property name="text">
+                               <string>Strongly Disagree</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="2" column="1" alignment="Qt::AlignHCenter">
+                             <widget class="QLabel" name="label_29">
+                              <property name="styleSheet">
+                               <string notr="true">background-color: rgb(207, 207, 207);</string>
+                              </property>
+                              <property name="text">
+                               <string>Strongly Disagree</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                         </layout>
+                        </widget>
+                        <widget class="QWidget" name="page_6">
+                         <layout class="QVBoxLayout" name="verticalLayout_36">
+                          <item>
+                           <widget class="QLabel" name="label_42">
+                            <property name="sizePolicy">
+                             <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                              <horstretch>0</horstretch>
+                              <verstretch>0</verstretch>
+                             </sizepolicy>
+                            </property>
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>0</height>
+                             </size>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);
+border: 2px solid rgb(0, 85, 0);</string>
+                            </property>
+                            <property name="text">
+                             <string>How would you rate lecturer's class Attendance</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <spacer name="verticalSpacer_18">
+                            <property name="orientation">
+                             <enum>Qt::Vertical</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                             <size>
+                              <width>20</width>
+                              <height>40</height>
+                             </size>
+                            </property>
+                           </spacer>
+                          </item>
+                          <item>
+                           <layout class="QGridLayout" name="gridLayout_5">
+                            <item row="3" column="1" alignment="Qt::AlignHCenter">
+                             <widget class="QLabel" name="label_51">
+                              <property name="text">
+                               <string>Strongly Disagree</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="2" column="0">
+                             <widget class="QLabel" name="label_44">
+                              <property name="styleSheet">
+                               <string notr="true">background-color: rgb(207, 207, 207);</string>
+                              </property>
+                              <property name="text">
+                               <string>Sometimes late to class</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="1" column="0">
+                             <widget class="QLabel" name="label_45">
+                              <property name="text">
+                               <string>Always late to class                                                                                         </string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="2" column="1" alignment="Qt::AlignHCenter">
+                             <widget class="QLabel" name="label_46">
+                              <property name="styleSheet">
+                               <string notr="true">background-color: rgb(207, 207, 207);</string>
+                              </property>
+                              <property name="text">
+                               <string>Strongly Disagree</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="1" column="1" alignment="Qt::AlignHCenter">
+                             <widget class="QLabel" name="label_47">
+                              <property name="text">
+                               <string>Strongly Disagree</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="3" column="0">
+                             <widget class="QLabel" name="label_50">
+                              <property name="text">
+                               <string>Does not come to class often</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="0" column="1" alignment="Qt::AlignHCenter">
+                             <widget class="QLabel" name="label_48">
+                              <property name="styleSheet">
+                               <string notr="true">background-color: rgb(207, 207, 207);</string>
+                              </property>
+                              <property name="text">
+                               <string>Strongly Disagree</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="0" column="0">
+                             <widget class="QLabel" name="label_49">
+                              <property name="styleSheet">
+                               <string notr="true">background-color: rgb(207, 207, 207);</string>
+                              </property>
+                              <property name="text">
+                               <string>Always puntual to class</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                         </layout>
+                        </widget>
+                        <widget class="QWidget" name="page_12">
+                         <layout class="QVBoxLayout" name="verticalLayout_37">
+                          <item>
+                           <widget class="QLabel" name="label_72">
+                            <property name="sizePolicy">
+                             <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+                              <horstretch>0</horstretch>
+                              <verstretch>0</verstretch>
+                             </sizepolicy>
+                            </property>
+                            <property name="minimumSize">
+                             <size>
+                              <width>100</width>
+                              <height>0</height>
+                             </size>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);
+border: 2px solid rgb(0, 85, 0);</string>
+                            </property>
+                            <property name="text">
+                             <string>Lecturer's Overall Effort for this course</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <spacer name="verticalSpacer_19">
+                            <property name="orientation">
+                             <enum>Qt::Vertical</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                             <size>
+                              <width>20</width>
+                              <height>40</height>
+                             </size>
+                            </property>
+                           </spacer>
+                          </item>
+                          <item>
+                           <layout class="QGridLayout" name="gridLayout_7" rowminimumheight="30,30,30,30,30,30,0">
+                            <item row="5" column="0">
+                             <widget class="QLabel" name="label_43">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>The lecturer demands gifts from students in order to give BETTER GRADES</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="4" column="0">
+                             <widget class="QLabel" name="label_52">
+                              <property name="styleSheet">
+                               <string notr="true">background-color: rgb(207, 207, 207);</string>
+                              </property>
+                              <property name="text">
+                               <string>Shows good concerns for all students</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="2" column="0">
+                             <widget class="QLabel" name="label_53">
+                              <property name="styleSheet">
+                               <string notr="true">background-color: rgb(207, 207, 207);</string>
+                              </property>
+                              <property name="text">
+                               <string>Uses variety of examples to illustrate a point</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="1" column="0">
+                             <widget class="QLabel" name="label_54">
+                              <property name="text">
+                               <string>Very knowledgeable of the subject matter</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="2" column="1" alignment="Qt::AlignHCenter">
+                             <widget class="QLabel" name="label_55">
+                              <property name="styleSheet">
+                               <string notr="true">background-color: rgb(207, 207, 207);</string>
+                              </property>
+                              <property name="text">
+                               <string>Strongly Disagree</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="1" column="1" alignment="Qt::AlignHCenter">
+                             <widget class="QLabel" name="label_63">
+                              <property name="text">
+                               <string>Strongly Disagree</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="0" column="1" alignment="Qt::AlignHCenter">
+                             <widget class="QLabel" name="label_64">
+                              <property name="styleSheet">
+                               <string notr="true">background-color: rgb(207, 207, 207);</string>
+                              </property>
+                              <property name="text">
+                               <string>Strongly Disagree</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="0" column="0">
+                             <widget class="QLabel" name="label_65">
+                              <property name="styleSheet">
+                               <string notr="true">background-color: rgb(207, 207, 207);</string>
+                              </property>
+                              <property name="text">
+                               <string>Uses lecture time to tell glorifying stories</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="3" column="0">
+                             <widget class="QLabel" name="label_66">
+                              <property name="text">
+                               <string>Returns test grades back to students on time</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="3" column="1" alignment="Qt::AlignHCenter">
+                             <widget class="QLabel" name="label_67">
+                              <property name="text">
+                               <string>Strongly Disagree</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="6" column="0">
+                             <widget class="QLabel" name="label_68">
+                              <property name="styleSheet">
+                               <string notr="true">background-color: rgb(207, 207, 207);
+font: 10pt &quot;Comic Sans MS&quot;;</string>
+                              </property>
+                              <property name="text">
+                               <string>uses some modern technologies in teaching (projectors, power points and other audio Visual)</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="4" column="1" alignment="Qt::AlignHCenter">
+                             <widget class="QLabel" name="label_69">
+                              <property name="styleSheet">
+                               <string notr="true">background-color: rgb(207, 207, 207);</string>
+                              </property>
+                              <property name="text">
+                               <string>Strongly Disagree</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="5" column="1" alignment="Qt::AlignHCenter">
+                             <widget class="QLabel" name="label_70">
+                              <property name="text">
+                               <string>Strongly Disagree</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="6" column="1" alignment="Qt::AlignHCenter">
+                             <widget class="QLabel" name="label_71">
+                              <property name="styleSheet">
+                               <string notr="true">background-color: rgb(207, 207, 207);</string>
+                              </property>
+                              <property name="text">
+                               <string>Strongly Disagree</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                         </layout>
+                        </widget>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                    <widget class="QWidget" name="recommndTab">
+                     <attribute name="title">
+                      <string>Recommendations and Comments</string>
+                     </attribute>
+                     <layout class="QVBoxLayout" name="verticalLayout_12">
+                      <item>
+                       <widget class="QLabel" name="label_26">
+                        <property name="text">
+                         <string>Click a comment/recommendation to view Complete details</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QTableWidget" name="commentTable">
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>0</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>16777215</width>
+                          <height>16777215</height>
+                         </size>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">font: 10pt &quot;Comic Sans MS&quot;;</string>
+                        </property>
+                        <property name="dragEnabled">
+                         <bool>false</bool>
+                        </property>
+                        <property name="alternatingRowColors">
+                         <bool>true</bool>
+                        </property>
+                        <property name="selectionMode">
+                         <enum>QAbstractItemView::MultiSelection</enum>
+                        </property>
+                        <property name="gridStyle">
+                         <enum>Qt::SolidLine</enum>
+                        </property>
+                        <property name="wordWrap">
+                         <bool>true</bool>
+                        </property>
+                        <attribute name="horizontalHeaderDefaultSectionSize">
+                         <number>486</number>
+                        </attribute>
+                        <row>
+                         <property name="text">
+                          <string>1</string>
+                         </property>
+                        </row>
+                        <row>
+                         <property name="text">
+                          <string/>
+                         </property>
+                        </row>
+                        <column>
+                         <property name="text">
+                          <string>Comment</string>
+                         </property>
+                        </column>
+                        <column>
+                         <property name="text">
+                          <string>Recommendation</string>
+                         </property>
+                        </column>
+                        <item row="0" column="0">
+                         <property name="text">
+                          <string>the lecturer should always come to class early because in that does he get it right \n</string>
+                         </property>
+                         <property name="flags">
+                          <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+                         </property>
+                        </item>
+                        <item row="0" column="1">
+                         <property name="text">
+                          <string>the lecturer should always come to class early because in that does he get it right \n</string>
+                         </property>
+                        </item>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout">
+                    <item>
+                     <widget class="QPushButton" name="prevBtn">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">padding: 10px;
+width: 100px</string>
+                      </property>
+                      <property name="text">
+                       <string>Previous</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <spacer name="horizontalSpacer">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="nextBtn">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">padding: 10px;
+width: 100px</string>
+                      </property>
+                      <property name="text">
+                       <string>next</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="lectHallPage">
+           <layout class="QVBoxLayout" name="verticalLayout_17">
+            <item>
+             <widget class="QWidget" name="widget_5" native="true">
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_16">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_8">
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_13">
+                   <item>
+                    <widget class="QLabel" name="label_94">
+                     <property name="minimumSize">
+                      <size>
+                       <width>263</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">background-color: rgb(255, 255, 255);
+padding: 10px;
+border-bottom: 2px solid rgb(0, 85, 0);</string>
+                     </property>
+                     <property name="text">
+                      <string>Add Lecture Venue</string>
+                     </property>
+                     <property name="scaledContents">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <layout class="QVBoxLayout" name="verticalLayout_4">
+                     <item>
+                      <widget class="QLabel" name="label_95">
+                       <property name="text">
+                        <string>Lecture Venue Details</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <layout class="QFormLayout" name="formLayout_5">
+                       <item row="0" column="0">
+                        <widget class="QLabel" name="label_96">
+                         <property name="text">
+                          <string>Description:</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="1">
+                        <widget class="QLineEdit" name="lectVenueDesc">
+                         <property name="minimumSize">
+                          <size>
+                           <width>400</width>
+                           <height>0</height>
+                          </size>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Venue Description e.g NLR Room II</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="0">
+                        <widget class="QLabel" name="label_97">
+                         <property name="text">
+                          <string>School:</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="1">
+                        <widget class="QComboBox" name="lectSchList">
+                         <property name="minimumSize">
+                          <size>
+                           <width>163</width>
+                           <height>0</height>
+                          </size>
+                         </property>
+                         <item>
+                          <property name="text">
+                           <string>Select School</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>SET</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>SEET</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>SIPET</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>SEMT</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>SAAT</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>SICT</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <spacer name="verticalSpacer_5">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>20</width>
+                         <height>40</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_7">
+                       <item>
+                        <spacer name="horizontalSpacer_2">
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="addVenue">
+                         <property name="styleSheet">
+                          <string notr="true">padding: 10px;
+</string>
+                         </property>
+                         <property name="text">
+                          <string>Add Venue</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <spacer name="horizontalSpacer_3">
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <spacer name="verticalSpacer_8">
+                     <property name="orientation">
+                      <enum>Qt::Vertical</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>20</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_5">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="Line" name="line_4">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_4">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_15">
+                   <item>
+                    <widget class="QLabel" name="label_98">
+                     <property name="text">
+                      <string>Lecture Venues</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QListWidget" name="lectVenueList">
+                     <property name="styleSheet">
+                      <string notr="true">font: 11pt &quot;Consolas&quot;;
+border-left: 3px solid rgb(0, 85, 0)</string>
+                     </property>
+                     <property name="movement">
+                      <enum>QListView::Free</enum>
+                     </property>
+                     <property name="resizeMode">
+                      <enum>QListView::Adjust</enum>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="coursesPage">
+           <layout class="QVBoxLayout" name="verticalLayout_21">
+            <item>
+             <widget class="QWidget" name="widget_4" native="true">
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_20">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_10">
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_18">
+                   <item>
+                    <widget class="QLabel" name="label_89">
+                     <property name="styleSheet">
+                      <string notr="true">background-color: rgb(255, 255, 255);
+padding: 10px;
+border-bottom: 2px solid rgb(0, 85, 0);</string>
+                     </property>
+                     <property name="text">
+                      <string>Add Course</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <layout class="QVBoxLayout" name="verticalLayout_3">
+                     <item>
+                      <widget class="QLabel" name="label_90">
+                       <property name="text">
+                        <string>Course Details</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <layout class="QFormLayout" name="formLayout_4">
+                       <item row="0" column="0">
+                        <widget class="QLabel" name="label_91">
+                         <property name="text">
+                          <string>Course Code:</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="0">
+                        <widget class="QLabel" name="label_92">
+                         <property name="text">
+                          <string>Course Name:</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="1">
+                        <spacer name="verticalSpacer_4">
+                         <property name="orientation">
+                          <enum>Qt::Vertical</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>20</width>
+                           <height>40</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                       <item row="0" column="1">
+                        <widget class="QLineEdit" name="courseCode">
+                         <property name="minimumSize">
+                          <size>
+                           <width>400</width>
+                           <height>0</height>
+                          </size>
+                         </property>
+                         <property name="placeholderText">
+                          <string>e.g MAT111</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="1">
+                        <widget class="QLineEdit" name="courseName">
+                         <property name="placeholderText">
+                          <string>e.g General Mathematics </string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_9">
+                       <item>
+                        <spacer name="horizontalSpacer_7">
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="addCourseBtn">
+                         <property name="styleSheet">
+                          <string notr="true">padding: 10px;</string>
+                         </property>
+                         <property name="text">
+                          <string>Add Course</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <spacer name="horizontalSpacer_6">
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <spacer name="verticalSpacer_9">
+                     <property name="orientation">
+                      <enum>Qt::Vertical</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>20</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_8">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="Line" name="line_3">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_14">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_19">
+                   <item>
+                    <widget class="QLabel" name="label_93">
+                     <property name="text">
+                      <string>Course List</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QListWidget" name="courseList">
+                     <property name="minimumSize">
+                      <size>
+                       <width>300</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">font: 11pt &quot;Consolas&quot;;
+border-left: 3px solid rgb(0, 85, 0)</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="lecturersPage">
+           <layout class="QVBoxLayout" name="verticalLayout_26">
+            <item>
+             <widget class="QWidget" name="widget_3" native="true">
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_25">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_12">
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_23">
+                   <item>
+                    <widget class="QLabel" name="label_78">
+                     <property name="styleSheet">
+                      <string notr="true">background-color: rgb(255, 255, 255);
+padding: 10px;
+border-bottom: 2px solid rgb(0, 85, 0);</string>
+                     </property>
+                     <property name="text">
+                      <string>Add Lecturer</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <layout class="QVBoxLayout" name="verticalLayout_22">
+                     <item>
+                      <layout class="QVBoxLayout" name="verticalLayout_2">
+                       <item>
+                        <widget class="QLabel" name="label_79">
+                         <property name="text">
+                          <string>Personal Details</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <layout class="QFormLayout" name="formLayout_2">
+                         <item row="0" column="0">
+                          <widget class="QLabel" name="label_80">
+                           <property name="text">
+                            <string>Title:</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="1" column="0">
+                          <widget class="QLabel" name="label_81">
+                           <property name="text">
+                            <string>Fullname:</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="1" column="1">
+                          <widget class="QLineEdit" name="lectFname">
+                           <property name="minimumSize">
+                            <size>
+                             <width>400</width>
+                             <height>0</height>
+                            </size>
+                           </property>
+                           <property name="placeholderText">
+                            <string>e.g Ibrahim M. Abdullahi</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="0" column="1">
+                          <widget class="QComboBox" name="lectTitleCombo">
+                           <item>
+                            <property name="text">
+                             <string>Select Title</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>Prof</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>Dr</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>Engr</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>Mr</string>
+                            </property>
+                           </item>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <spacer name="verticalSpacer_3">
+                         <property name="orientation">
+                          <enum>Qt::Vertical</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>20</width>
+                           <height>40</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="label_82">
+                         <property name="text">
+                          <string>Course Details</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <layout class="QFormLayout" name="formLayout_3">
+                         <item row="0" column="0">
+                          <widget class="QLabel" name="label_83">
+                           <property name="text">
+                            <string>Course 1:</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="1" column="0">
+                          <widget class="QLabel" name="label_84">
+                           <property name="text">
+                            <string>Course 2:</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="2" column="0">
+                          <widget class="QLabel" name="label_85">
+                           <property name="text">
+                            <string>Course 3</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="3" column="0">
+                          <widget class="QLabel" name="label_86">
+                           <property name="text">
+                            <string>Course 4</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="4" column="0">
+                          <widget class="QLabel" name="label_87">
+                           <property name="text">
+                            <string>Course 5</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="5" column="0">
+                          <spacer name="verticalSpacer_10">
+                           <property name="orientation">
+                            <enum>Qt::Vertical</enum>
+                           </property>
+                           <property name="sizeHint" stdset="0">
+                            <size>
+                             <width>20</width>
+                             <height>40</height>
+                            </size>
+                           </property>
+                          </spacer>
+                         </item>
+                         <item row="0" column="1">
+                          <widget class="QComboBox" name="course1">
+                           <item>
+                            <property name="text">
+                             <string>Select Course</string>
+                            </property>
+                           </item>
+                          </widget>
+                         </item>
+                         <item row="1" column="1">
+                          <widget class="QComboBox" name="course2">
+                           <item>
+                            <property name="text">
+                             <string>Select Course</string>
+                            </property>
+                           </item>
+                          </widget>
+                         </item>
+                         <item row="2" column="1">
+                          <widget class="QComboBox" name="course3">
+                           <item>
+                            <property name="text">
+                             <string>Select Course</string>
+                            </property>
+                           </item>
+                          </widget>
+                         </item>
+                         <item row="3" column="1">
+                          <widget class="QComboBox" name="course4">
+                           <item>
+                            <property name="text">
+                             <string>Select Course</string>
+                            </property>
+                           </item>
+                          </widget>
+                         </item>
+                         <item row="4" column="1">
+                          <widget class="QComboBox" name="course5">
+                           <item>
+                            <property name="text">
+                             <string>Select Course</string>
+                            </property>
+                           </item>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <spacer name="verticalSpacer_2">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>20</width>
+                         <height>40</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_11">
+                       <item>
+                        <spacer name="horizontalSpacer_9">
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="addLecturer">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>40</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">padding:10px</string>
+                         </property>
+                         <property name="text">
+                          <string>Add Lecturer</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <spacer name="horizontalSpacer_10">
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <spacer name="verticalSpacer_21">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>20</width>
+                         <height>40</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_11">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="Line" name="line_2">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_17">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_24">
+                   <item>
+                    <widget class="QLabel" name="label_88">
+                     <property name="text">
+                      <string>Lecturers List</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QListWidget" name="lectList">
+                     <property name="styleSheet">
+                      <string notr="true">font: 11pt &quot;Consolas&quot;;
+border-left: 3px solid rgb(0, 85, 0)</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="ClassRepsPage">
+           <layout class="QVBoxLayout" name="verticalLayout_30">
+            <item>
+             <widget class="QWidget" name="widget_2" native="true">
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_29">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_14">
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_27">
+                   <item>
+                    <widget class="QLabel" name="label_73">
+                     <property name="styleSheet">
+                      <string notr="true">background-color: rgb(255, 255, 255);
+padding: 10px;
+border-bottom: 2px solid rgb(0, 85, 0);</string>
+                     </property>
+                     <property name="text">
+                      <string>Add Class Rep</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <layout class="QVBoxLayout" name="verticalLayout">
+                     <item>
+                      <widget class="QLabel" name="label_74">
+                       <property name="text">
+                        <string>Class Rep Details</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <layout class="QFormLayout" name="formLayout">
+                       <item row="2" column="0">
+                        <widget class="QLabel" name="label_75">
+                         <property name="text">
+                          <string>Class Rep Username:</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="4" column="1">
+                        <spacer name="verticalSpacer">
+                         <property name="orientation">
+                          <enum>Qt::Vertical</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>20</width>
+                           <height>40</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                       <item row="1" column="1">
+                        <widget class="QComboBox" name="cr_level">
+                         <item>
+                          <property name="text">
+                           <string>Select Level</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>100</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>200</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>300</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>400</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>500</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                       <item row="1" column="0">
+                        <widget class="QLabel" name="label_76">
+                         <property name="text">
+                          <string>Level:</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="1">
+                        <widget class="QComboBox" name="cr_username">
+                         <property name="minimumSize">
+                          <size>
+                           <width>400</width>
+                           <height>0</height>
+                          </size>
+                         </property>
+                         <item>
+                          <property name="text">
+                           <string>Select Class Rep</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_13">
+                       <item>
+                        <spacer name="horizontalSpacer_12">
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="addcrBtn">
+                         <property name="styleSheet">
+                          <string notr="true">padding: 10px;</string>
+                         </property>
+                         <property name="text">
+                          <string>Add Class Rep</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <spacer name="horizontalSpacer_13">
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <spacer name="verticalSpacer_11">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>20</width>
+                         <height>40</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_15">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="Line" name="line">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_16">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_28">
+                   <item>
+                    <widget class="QLabel" name="label_77">
+                     <property name="text">
+                      <string>Class Reps - Usernames</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QListWidget" name="cr_list">
+                     <property name="styleSheet">
+                      <string notr="true">font: 11pt &quot;Consolas&quot;;
+border-left: 3px solid rgb(0, 85, 0)</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="settingPage">
+           <layout class="QHBoxLayout" name="horizontalLayout_16">
+            <item>
+             <spacer name="horizontalSpacer_27">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_43">
+              <item>
+               <widget class="QGroupBox" name="groupBox">
+                <property name="styleSheet">
+                 <string notr="true">QGroupBox{
+	font: 75 10pt &quot;Monaco&quot;;
+}
+
+QPushButton{
+	padding: 5px;
+	background-color: rgb(25, 93, 39);
+}
+QPushButton:hover{
+	color: rgb(25, 93, 39);
+	background: #ffffff;
+	border: 2px solid rgb(25, 93, 39);
+}</string>
+                </property>
+                <property name="title">
+                 <string>Settings</string>
+                </property>
+                <property name="flat">
+                 <bool>true</bool>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_3">
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_39">
+                   <item>
+                    <widget class="QPushButton" name="logoutBtn">
+                     <property name="minimumSize">
+                      <size>
+                       <width>100</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true"/>
+                     </property>
+                     <property name="text">
+                      <string>Logout</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="changeAccountBtn">
+                     <property name="text">
+                      <string>Change Account</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_22">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_24">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QGroupBox" name="groupBox_2">
+                <property name="styleSheet">
+                 <string notr="true">QGroupBox{
+	font: 75 10pt &quot;Monaco&quot;;
+}
+
+QPushButton{
+	padding: 5px;
+	background-color: rgb(25, 93, 39);
+}
+QPushButton:hover{
+	color: rgb(25, 93, 39);
+	background: #ffffff;
+	border: 2px solid rgb(25, 93, 39);
+}</string>
+                </property>
+                <property name="title">
+                 <string>Help</string>
+                </property>
+                <property name="flat">
+                 <bool>true</bool>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_15">
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_41">
+                   <item>
+                    <widget class="QPushButton" name="helpBtn">
+                     <property name="text">
+                      <string>iLecture Grading System Help</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="aboutButton">
+                     <property name="text">
+                      <string>About iLGS</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="updateBtn">
+                     <property name="text">
+                      <string>Check for Updates</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="reportBtn">
+                     <property name="text">
+                      <string>Report an Issue</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_23">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <spacer name="verticalSpacer_24">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_28">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_31">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_32">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_30">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_29">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_26">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_25">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

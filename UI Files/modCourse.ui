@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>274</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+QComboBox, QLineEdit {
+border-radius: 5px;
+border: 3px solid rgb(207, 207, 207);
+font: 12pt &quot;Consolas&quot;;
+}
+
+
+QLineEdit:focus, QComboBox:focus, QComboBox:hover {
+outline: 1px solid rgb(60, 185, 112);
+background: rgb(223, 255, 208);
+border: 2px solid rgb(67, 148, 103);
+height: 10px;
+}
+
+QLabel {
+font-size: 16px;
+font-family: Comic Sans Ms;
+padding: 5px;
+}
+
+QPushButton {
+background-color: #4CAF50;
+selection-color: rgb(255, 255, 255);
+border-radius: 3px;
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+font: 10pt &quot;Comic Sans MS&quot;;
+padding: 0px;
+}
+QPushButton:hover {
+background-color: #ffffff;
+color: #000000;
+border: 2px solid  #4CAF50;
+}
+
+QPushButton#closeBtn {
+image: url(:/close);
+background: #ffffff;
+}
+
+QPushButton:hover#closeBtn {
+border: 2px solid rgb(248, 0, 0);
+}
+
+QLabel#closeBtn {
+padding: 0px;
+}
+QLabel#LoginLabel, QLabel#register_label {
+font-size: 30px;
+color:rgb(0, 255, 59);
+}
+
+QCheckBox {
+font: 75 12pt &quot;Comic Sans MS&quot;;
+}
+QLabel#errorLabel{
+background: rgba(254, 0, 0, 100);
+padding: 5px;
+height: 10px;
+}</string>
+  </property>
+  <widget class="QWidget" name="gridLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>40</y>
+     <width>581</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="0">
+     <widget class="QDialogButtonBox" name="buttonBox">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="standardButtons">
+       <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <layout class="QFormLayout" name="formLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Course Code:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Course Name:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="mod_coursename"/>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="mod_coursecode"/>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>10</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Modify Course</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="removeCourse">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>200</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	background-color: rgb(255, 85, 0);
+}
+
+QPushButton:hover{
+	
+	background-color: rgb(255, 255, 255);
+	border: 2px solid rgb(255, 0, 0);
+	color: rgb(255, 0, 0);
+}</string>
+   </property>
+   <property name="text">
+    <string>Remove Course</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>Dialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>Dialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
